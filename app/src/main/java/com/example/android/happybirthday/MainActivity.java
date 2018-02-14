@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView    JtxtVHappy, JtxtVFrom;
+    TextView    happy_birthday, from_me;
     Typeface ty1;
 
 
@@ -14,14 +14,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Type Face
+
+        // Declaring a Type Face
         ty1 = Typeface.createFromAsset(getAssets(),"font/berkshireSwash-Regular.ttf");
-        //Text View
-        JtxtVHappy = (TextView) findViewById(R.id.txtVHappy);
-        JtxtVFrom = (TextView) findViewById(R.id.txtVFrom);
-        ////
-        JtxtVHappy.setTypeface(ty1);
-        JtxtVFrom.setTypeface(ty1);
+
+        //TextViews initialization
+        happy_birthday = (TextView) findViewById(R.id.txtVHappy);
+        from_me = (TextView) findViewById(R.id.txtVFrom);
+
+        //Setting Typeface to TextViews
+        happy_birthday.setTypeface(ty1);
+        from_me.setTypeface(ty1);
 
     }
 }
